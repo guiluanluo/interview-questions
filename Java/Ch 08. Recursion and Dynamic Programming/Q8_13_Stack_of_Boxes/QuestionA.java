@@ -20,7 +20,7 @@ import java.util.Collections;
  *
  * hint 322: one we pick the box on the bottom, we nee dot pick the second box. then the third box.
  *
- * hint 368: onw ou have a basic recursive algorithm implemented, think about if you can optimize it. are there any
+ * hint 368: now you have a basic recursive algorithm implemented, think about if you can optimize it. are there any
  * repeated subproblems?
  *
  * hint 378: alternatively, we can think about the repeated choices as: does the first box go on the stack? does the

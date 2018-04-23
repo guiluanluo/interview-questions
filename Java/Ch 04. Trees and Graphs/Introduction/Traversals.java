@@ -1,6 +1,8 @@
 package Introduction;
 
+import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 import CtCILibrary.BTreePrinter;
@@ -77,6 +79,28 @@ public class Traversals {
     }
   }
 
+  public static void breathFirstSearch_recursive(TreeNode root) {
+    if (root != null) {
+      printLevelOrder(Arrays.asList(root));
+    }
+  }
+
+  private static void printLevelOrder(List<TreeNode> level) {
+    List<TreeNode> nextLevel = new LinkedList<>();
+    for (TreeNode node : level) {
+      visit(node);
+      if (node.left != null) {
+        nextLevel.add(node.left);
+      }
+      if (node.right != null) {
+        nextLevel.add(node.right);
+      }
+    }
+    if (!nextLevel.isEmpty()) {
+      printLevelOrder(nextLevel);
+    }
+  }
+
   public static void main(String[] args) {
     int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
@@ -98,5 +122,8 @@ public class Traversals {
 
     System.out.println("==== breathFirstSearch ====");
     breathFirstSearch(root);
+
+    System.out.println("==== breathFirstSearch_recursive ====");
+    breathFirstSearch_recursive(root);
   }
 }

@@ -37,9 +37,7 @@ public class QuestionA {
 
       for (int altStart = mainSize; altStart <= size; altStart++) {
         for (int altEnd = altStart; altEnd <= size; altEnd++) {
-
           String alt = value.substring(altStart, altEnd);
-
           String cand = buildFromPattern(pattern, main, alt);
           if (cand.equals(value)) {
             System.out.println(main + ", " + alt);

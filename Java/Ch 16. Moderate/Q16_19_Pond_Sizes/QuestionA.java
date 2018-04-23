@@ -45,13 +45,27 @@ public class QuestionA {
     if (row < 0 || col < 0 || row >= land.length || col >= land[row].length || land[row][col] != 0) {
       return 0;
     }
+
     int size = 1;
     land[row][col] = -1;
+    //there are 9 points around (r,c)
     for (int dr = -1; dr <= 1; dr++) {
       for (int dc = -1; dc <= 1; dc++) {
         size += computeSize(land, row + dr, col + dc);
       }
     }
+
+    //equal to
+//    size += computeSize(land, row - 1, col - 1);
+//    size += computeSize(land, row - 1, col);
+//    size += computeSize(land, row - 1, col + 1);
+//    size += computeSize(land, row, col - 1);
+//    size += computeSize(land, row, col);
+//    size += computeSize(land, row, col + 1);
+//    size += computeSize(land, row + 1, col - 1);
+//    size += computeSize(land, row + 1, col);
+//    size += computeSize(land, row + 1, col + 1);
+
     return size;
   }
 

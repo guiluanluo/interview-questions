@@ -1,7 +1,7 @@
 package Q16_23_Rand7_From_Rand5;
 
 /*
- * Ran7 from Rand5: implement a method rand7() given rand5(). that is, given a method that generates a random integer
+ * Rand7 from Rand5: implement a method rand7() given rand5(). that is, given a method that generates a random integer
  * between 0 and 4(inclusive), write a method that generate a random integer between 0 and 6(inclusive).
  *
  * hints 504 be very careful that your solution actually return each value from 0 through 6 with equal probability.
@@ -27,7 +27,7 @@ package Q16_23_Rand7_From_Rand5;
  * hint 719:you can implement rand7() with rand5(), you just can't do it deterministically (such that you know it will
  * definitely terminate after a certain number of calls). given this, write a solution that works.
  *
- * Solution: ti implement this function correctly, we must have each of value between 0-6 return with 1/7 probability
+ * Solution: it implement this function correctly, we must have each of value between 0-6 return with 1/7 probability
  * fixed number of calls: (rand5+rand5())/7, two calls, 5*5 probability, unfortunately, it does not generate the values
  * with equal probability.
  *

@@ -24,9 +24,7 @@ public class Quicksort {
   }
 
   public static int partition(int[] arr, int left, int right) {
-
     int pivot = arr[(left + right) / 2]; // Pick a pivot point. Can be an element
-
     while (left <= right) { // Until we've gone through the whole array
       // Find element on left that should be on right
       while (arr[left] < pivot) {

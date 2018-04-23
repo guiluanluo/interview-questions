@@ -94,7 +94,7 @@ public class QuestionC {
   }
 
   public static void main(String[] args) {
-    int[] array = {1, 5, 2, 9, -1, 11, 6, 13, 15};
+    int[] array = {1, 5, 1, 9, -1, 11, 6, 13, 15};
     int[] smallest = smallestK(array, 3);
     System.out.println(AssortedMethods.arrayToString(smallest));
   }

@@ -30,7 +30,7 @@ public class QuestionB {
     }
 
     Point p = new Point(row, col);
-		
+
 		/* If we've already visited this cell, return. */
     if (failedPoints.contains(p)) {
       return false;

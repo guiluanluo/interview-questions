@@ -40,9 +40,11 @@ public class QuestionB {
   public static char[] findLongestSubarray(char[] array) {
     /* Compute deltas between count of numbers and count of letters. */
     int[] deltas = computeDeltaArray(array);
+    printIntArray(deltas, "deltas");
 
 		/* Find pair in deltas with matching values and largest span. */
     int[] match = findLongestMatch(deltas);
+    printIntArray(match, "match");
 
 		/* Return the subarray. Note that it starts one *after* the
      * initial occurence of this delta. */
@@ -122,21 +124,33 @@ public class QuestionB {
     char b = '1';
     char a = 'a';
     char[] array = {a, b, a, b, a, b, b, b, b, b, a, a, a, a, a, b, a, b, a, b, b, a, a, a, a, a, a, a};
-    for (int i = 0; i < array.length; i++) {
-      System.out.print(array[i] + " ");
-    }
+    printArray(array, "array");
+
     System.out.println();
     char[] max = findLongestSubarray(array);
     if (max == null) {
       System.out.println("No equal subarray");
     } else {
       System.out.println(max.length);
-      for (int i = 0; i < max.length; i++) {
-        System.out.print(max[i] + " ");
-      }
-
+      printArray(max, "max");
       System.out.println("\nIs Valid? " + isEqual(max, 0, max.length));
     }
+  }
+
+  public static void printArray(char[] array, String methodName) {
+    StringBuilder builder = new StringBuilder();
+    for (int i = 0; i < array.length; i++) {
+      builder.append(array[i] + " ");
+    }
+    System.out.println(methodName + ":" + builder.toString());
+  }
+
+  public static void printIntArray(int[] array, String methodName) {
+    StringBuilder builder = new StringBuilder();
+    for (int i = 0; i < array.length; i++) {
+      builder.append(array[i] + " ");
+    }
+    System.out.println(methodName + ":" + builder.toString());
   }
 
 }

@@ -53,6 +53,14 @@ public class CountingSort {
     }
 
     // Build the output character array
+
+    /** 2) Modify the count array such that each element at each index stores the sum of previous counts.
+     * Input data: 1, 4, 1, 2, 7, 5, 2
+     *  Index:     0  1  2  3  4  5  6  7  8  9
+     *  Count:     0  2  4  4  5  6  6  7  7  7
+     *Output data: 1, 1, 2, 2, 4, 5, 7
+     * The modified count array indicates the position of each object in the output sequence.
+     */
     for (int i = 0; i < n; ++i) {
       output[count[arr[i]] - 1] = arr[i];
       --count[arr[i]];
@@ -71,6 +79,6 @@ public class CountingSort {
 
     System.out.print("Before Sort character array is:  " + Arrays.toString(arr) + "\n");
     ob.sort(arr);
-    System.out.print("After Sorted character array is: " + Arrays.toString(arr)+ "\n");
+    System.out.print("After Sorted character array is: " + Arrays.toString(arr) + "\n");
   }
 }

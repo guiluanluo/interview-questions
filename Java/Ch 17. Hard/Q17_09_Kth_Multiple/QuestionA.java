@@ -7,7 +7,7 @@ import java.util.Collections;
  * Kth multiple: design an algorithm to find the kth number such that the only prime factors are 3,5,and 7. note that
  * 3,5,and 7 do not have to be factors, but it should not have any other prime factors.
  *
- * for example the first several multiples would be (in order) 1,3,5,7,9,15,21.
+ * for example the first several multiples would be (in order) 1,3,5,7,9,15,21,25,35.
  *
  * Solution: let's understand what the problem is asking for. it is asking for the kth smallest number that is in the
  * form (3 powerOf a)*(5 powerOf b)*(7 powerOf c). let's start with a brute force way of finding this.

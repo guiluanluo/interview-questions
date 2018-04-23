@@ -54,6 +54,7 @@ public class QuestionA {
       //to create P(index+1), we can simple clone the subset of P(index) and add a3 to them!!
       int item = set.get(index);
       System.out.println("item: " + item + ", index:" + index + ", set:" + set);
+
       ArrayList<ArrayList<Integer>> moresubsets = new ArrayList<ArrayList<Integer>>();
       for (ArrayList<Integer> subset : allsubsets) {
         ArrayList<Integer> newsubset = new ArrayList<Integer>();

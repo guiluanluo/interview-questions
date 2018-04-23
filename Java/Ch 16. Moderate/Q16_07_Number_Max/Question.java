@@ -54,7 +54,7 @@ public class Question {
     int sb = sign(b); // if b >= 0, then 1 else 0
     int sc = sign(c); // depends on whether or not a - b overflows
 
-		/* We want to define a value k which is 1 if a > b and 0 if a < b. 
+		/* We want to define a value k which is 1 if a > b and 0 if a < b.
      * (if a = b, it doesn't matter what value k is) */
 
     int use_sign_of_a = sa ^ sb; // If a and b have different signs, then k = sign(a)
@@ -71,8 +71,8 @@ public class Question {
     int a = 26;
     int b = -15;
 
-    System.out.println("max_naive(" + a + ", " + b + ") = " + getMaxNaive(a, b));
-    System.out.println("max(" + a + ", " + b + ") = " + getMax(a, b));
+    System.out.println("** max_naive(" + a + ", " + b + ") = " + getMaxNaive(a, b));
+    System.out.println("** max(" + a + ", " + b + ") = " + getMax(a, b));
 
     a = -15;
     b = 2147483647;

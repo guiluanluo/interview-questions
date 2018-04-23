@@ -8,12 +8,12 @@ package Q16_22_Langtons_Ant;
  *
  * write a program to simulate the first K moves that the ant makes and print the final board as a grid. note that you
  * are not provided with the data structure to represent the grid. this is something you must design yourself. the only
- * input to your method is K. you should print the final grid and return nothing. the method signatur might be something
- * like void printMoves(int K).
+ * input to your method is K. you should print the final grid and return nothing. the method signature might be
+ * something like void printMoves(int K).
  *
  * hint 473: the tricky bit is handling an infinite grid. what are your options?
  *
- * hint 480: option 1: do you actually need an infinite grid? read the problem again. do uou know the max size of the
+ * hint 480: option 1: do you actually need an infinite grid? read the problem again. do you know the max size of the
  * grid?
  *
  * hint 532: option 2: think about how an ArrayList works. can you use an ArrayList for this?

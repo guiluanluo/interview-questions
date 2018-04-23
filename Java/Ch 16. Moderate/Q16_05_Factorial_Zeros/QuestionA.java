@@ -18,6 +18,7 @@ package Q16_05_Factorial_Zeros;
  *
  * consider a factorial like 6! = 1*2*3*4*5*6; a tailing zero is created with multiple of 10, and multiple of 10 are
  * created with pair of 5-multiples and 2-multiples.
+ * 5! = 120, 6!=720, 10!=3628800
  */
 public class QuestionA {
 

@@ -35,7 +35,7 @@ public class QuestionA {
 
   public static void main(String[] args) {
     int[] array1 = {1, 3, 15, 11, 12, 2};
-    int[] array2 = {23, 127, 234, 19, 10, 8};
+    int[] array2 = {23, 127, 234, 19, 8};
     int difference = findSmallestDifference(array1, array2);
     System.out.println(difference);
   }

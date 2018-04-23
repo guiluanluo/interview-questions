@@ -42,12 +42,14 @@ public class Question {
   }
 
   public static Point intersection(Point start1, Point end1, Point start2, Point end2) {
-    /* Rearranging these so that, in order of x values: start is before end and point 1 is before point 2.
-     * This will make some of the later logic simpler. */
+    /**
+     * Rearranging these so that, in order of x values:
+     * start is before end and point 1 is before point 2.
+     * This will make some of the later logic simpler.
+     */
     if (start1.x > end1.x) {
       swap(start1, end1);
     }
-
     if (start2.x > end2.x) {
       swap(start2, end2);
     }

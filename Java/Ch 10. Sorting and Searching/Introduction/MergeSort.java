@@ -45,7 +45,6 @@ public class MergeSort {
   }
 
   public static void merge(int[] array, int[] helper, int low, int middle, int high) {
-
     //Copy both halves into a helper array
     for (int i = low; i <= high; i++) {
       helper[i] = array[i];
@@ -55,12 +54,10 @@ public class MergeSort {
     int helperRight = middle + 1;
     int current = low;
 
-		/* Iterate through helper array. Compare the left and right
-     * half, copying back the smaller element from the two halves
-		 * into the original array.
+		/* Iterate through helper array. Compare the left and right half,
+     * copying back the smaller element from the two halves into the original array.
 		 */
     while (helperLeft <= middle && helperRight <= high) {
-
       if (helper[helperLeft] <= helper[helperRight]) {
         array[current] = helper[helperLeft];
         helperLeft++;

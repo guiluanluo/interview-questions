@@ -40,7 +40,9 @@ public class QuestionB {
   }
 
   public static void main(String[] args) {
-    int[] array = {0, 0, 0, 2, 2, 0, 1, 1, 1, 1, 1, 1, 1};
+//    int[] array = {0, 0, 0, 2, 2, 0, 1, 1, 1, 1, 1, 1, 1};
+
+    int[] array = {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 0, };
     System.out.println(array.length);
     System.out.println(findMajorityElement(array));
   }

@@ -33,7 +33,7 @@ public class Question {
     for (String str : arr) {
       map.put(str, true);
     }
-    Arrays.sort(arr, new LengthComparator()); // Sort by length
+    Arrays.sort(arr, new LengthComparator()); // Sort by length in descending order
 
     for (String s : arr) {
       if (canBuildWord(s, true, map)) {

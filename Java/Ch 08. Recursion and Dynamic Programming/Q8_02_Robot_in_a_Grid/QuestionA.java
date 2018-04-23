@@ -20,7 +20,7 @@ import CtCILibrary.AssortedMethods;
  *
  * how do we find a path to those spots?to find a path to (r-1, c) or (r, c-1), we need to move to one of its adjacent
  * cells. so, we need to find a path to a spot adjacent to (r-1, c), which are coordinates (r-2, c) and (r-1, c-1), or a
- * spot adjacent to (r, c-1), which are spots (r-1, c-1) and (f, c-2). observe that we list the point(r-1, c-1) twice:
+ * spot adjacent to (r, c-1), which are spots (r-1, c-1) and (r, c-2). observe that we list the point(r-1, c-1) twice:
  * we'll discuss that issue later. so then, to find a path from the origin, we just work backwards like this: start from
  * the last cell, we try to find a path to each of its adjacent cells.
  */
@@ -58,7 +58,7 @@ public class QuestionA {
 
   public static void main(String[] args) {
     int size = 5;
-    boolean[][] maze = AssortedMethods.randomBooleanMatrix(size, size, 70);
+    boolean[][] maze = AssortedMethods.randomBooleanMatrix(size, size, 90);
 
     AssortedMethods.printMatrix(maze);
 

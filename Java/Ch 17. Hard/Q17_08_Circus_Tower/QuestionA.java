@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * Circus tower: a circus is designing a tower routine consisting of people standing atp one another's shoulders. for
+ * Circus tower: a circus is designing a tower routine consisting of people standing at one another's shoulders. for
  * practical and aesthetic reasons, each person must be both shorter and lighter than the person below him/her. given
  * the heights and weights of each person in the circus, write a method to compute the largest possible number of people
  * in such a tower.
@@ -102,9 +102,6 @@ public class QuestionA {
 
     return items;
   }
-
-
-
 
   public static void main(String[] args) {
     ArrayList<HtWt> items = initialize();

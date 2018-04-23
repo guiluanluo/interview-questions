@@ -8,14 +8,14 @@ import java.util.PriorityQueue;
  * Continuous median: numbers are randomly generated and passed to a method. write a program to find and maintain the
  * median value as new values are generated.
  *
- * Solution: use tow priority heaps: a max heap for the values below the median, and a min heap for the values above the
+ * Solution: use two priority heaps: a max heap for the values below the median, and a min heap for the values above the
  * median. this will divide the elements roughly in half, with the middle two elements a the top of the two heaps. this
  * makes it trivial to find the median.
  */
 public class Question {
 
-  private static Comparator<Integer> maxHeapComparator;
-  private static Comparator<Integer> minHeapComparator;
+  private static Comparator<Integer> maxHeapComparator; //highest to lowest
+  private static Comparator<Integer> minHeapComparator; //lowest to highest
 
   private static PriorityQueue<Integer> maxHeap; //a max heap for the values below the median
   private static PriorityQueue<Integer> minHeap; //a min heap for the values above the median

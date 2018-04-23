@@ -14,7 +14,7 @@ import java.util.Set;
  * hint 174: suppose we had all valid ways of writing two pairs of parentheses? how could we use this to ge all valid
  * ways of writing three pairs?
  *
- * hint 187: we coul try genrating the solution for three pairs by taking the list of two pairs of parentheses and
+ * hint 187: we could try generating the solution for three pairs by taking the list of two pairs of parentheses and
  * adding a third pair. we'd have to add the third paren before, around, and after. that is: ()<SOLUTION>,
  * (</SOLUTION>), <SOLUTION>(). will this work?
  *
@@ -60,27 +60,22 @@ public class QuestionA {
   }
 
   public static Set<String> generateParens(int remaining) {
-
     Set<String> set = new HashSet<String>();
-
     if (remaining == 0) {
       set.add("");
-
     } else {
 
       Set<String> prev = generateParens(remaining - 1);
       for (String str : prev) {
-
         for (int i = 0; i < str.length(); i++) {
           if (str.charAt(i) == '(') {
             String s = insertInside(str, i);
-            /* Add s to set if it is not already in there. Note:
-             * HashSet automatically checks for duplicates before
-						 * adding, so an explicit check is not necessary. */
+            /* Add s to set if it is not already in there.
+             * Note: HashSet automatically checks for duplicates before adding, so an explicit check is not necessary.
+             */
             set.add(s);
           }
         }
-
         set.add("()" + str);
       }
     }

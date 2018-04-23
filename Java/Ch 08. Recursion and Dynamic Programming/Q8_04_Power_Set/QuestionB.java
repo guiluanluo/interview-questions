@@ -25,6 +25,7 @@ public class QuestionB {
 
     int max = 1 << set.size(); /* Compute 2^n */
     System.out.println("set.size(): " + set.size() + ", max: " + max);
+
     for (int k = 0; k < max; k++) {
       ArrayList<Integer> subset = convertIntToSet(k, set);
       allsubsets.add(subset);

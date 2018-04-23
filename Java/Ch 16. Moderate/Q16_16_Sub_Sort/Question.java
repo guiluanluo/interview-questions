@@ -125,9 +125,40 @@ public class Question {
     return true;
   }
 
+
+  public static int[] findUnsortedSequence_ll(int[] array) {
+    int[] result = new int[2];
+
+    int size = array.length;
+    int leftIdx = 0;
+    int rightIdx = size - 1;
+
+    for (int i = 1; i < size - 1; i++) {
+      if (array[i] > array[i - 1]) {
+        leftIdx = i;
+        break;
+      }
+    }
+
+    for (int j = size - 1; j >= 0; j--) {
+      if (array[j] > array[j - 1]) {
+        rightIdx = j;
+        break;
+      }
+    }
+    result[0] = leftIdx;
+    result[1] = rightIdx;
+
+    System.out.println(leftIdx + " " + rightIdx);
+
+    return result;
+  }
+
+
   public static void main(String[] args) {
     int[] array = {1, 9, 4, 3, 5};
     findUnsortedSequence(array);
+    findUnsortedSequence_ll(array);
   }
 
 }

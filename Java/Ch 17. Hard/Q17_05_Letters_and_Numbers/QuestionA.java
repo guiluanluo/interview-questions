@@ -63,12 +63,9 @@ public class QuestionA {
   public static char[] findLongestSubarray(char[] array) {
     System.out.println("array length: " + array.length);
     for (int len = array.length; len > 1; len--) {
-
       for (int i = 0; i <= array.length - len; i++) {
-
-        System.out.println("len:" + len + ",i:" + i
-            + ", call hasEqualLettersNumbers(), start=" + i + ", end:" + (i + len - 1));
-
+//        System.out.println("len:" + len + ",i:" + i
+//            + ", call hasEqualLettersNumbers(), start=" + i + ", end:" + (i + len - 1));
         if (hasEqualLettersNumbers(array, i, i + len - 1)) {
           return extractSubarray(array, i, i + len - 1);
         }
@@ -87,12 +84,12 @@ public class QuestionA {
       System.out.print(array[i] + " ");
     }
     System.out.println("\n");
+
     char[] max = findLongestSubarray(array);
-    System.out.println(max.length);
+    System.out.println("max.length: " + max.length);
     for (int i = 0; i < max.length; i++) {
       System.out.print(max[i] + " ");
     }
     System.out.println("\nIs Valid? " + hasEqualLettersNumbers(max, 0, max.length - 1));
   }
-
 }

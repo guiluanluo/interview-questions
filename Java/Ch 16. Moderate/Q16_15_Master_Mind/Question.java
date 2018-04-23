@@ -13,7 +13,7 @@ import java.util.Set;
  * for the correct slot, you get a "hit". if you guess a color that exists but is in the wrong slot, you get a
  * "pseudo-hit". note that a slot that is a hit can never count as a pseudo-hit.
  *
- * for exam[le, if the actually solution is RGBY and you guess GGRR, you have one hit and one pseudo-hit. write a method
+ * for example, if the actually solution is RGBY and you guess GGRR, you have one hit and one pseudo-hit. write a method
  * that, given a guess and a solution, return the number of hits and pseudo-hits.
  *
  * hint 638: try first creating an array with the frequency that each item occurs
@@ -54,11 +54,7 @@ public class Question {
     int hits = 0;
     int pseudoHits = 0;
 
-    Set<Character> solutionUniqueCharSet = new HashSet<>();
-    for (Character sch : solutionArray) {
-      solutionUniqueCharSet.add(sch);
-    }
-
+    //count hit number
     Set<Character> hitCharacters = new HashSet<>();
     for (int i = 0; i < guessArray.length; i++) {
       if (guessArray[i] == solutionArray[i]) {
@@ -67,14 +63,13 @@ public class Question {
       }
     }
 
-    Set<Character> guessUniqueCharSet = new HashSet<>();
-    for (int i = 0; i < guessArray.length; i++) {
-      if (guessUniqueCharSet.contains(guessArray[i])) {
-        continue;
-      } else {
-        guessUniqueCharSet.add(guessArray[i]);
-      }
+    //count pseudo-hit number
+    Set<Character> solutionUniqueCharSet = new HashSet<>();
+    for (Character sch : solutionArray) {
+      solutionUniqueCharSet.add(sch);
+    }
 
+    for (int i = 0; i < guessArray.length; i++) {
       if (!hitCharacters.contains(guessArray[i])) {
         if (solutionUniqueCharSet.contains(guessArray[i])) {
           pseudoHits += 1;
@@ -83,7 +78,6 @@ public class Question {
     }
 
     return new Result(hits, pseudoHits);
-
   }
 
 

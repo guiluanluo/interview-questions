@@ -5,7 +5,7 @@ package Q17_18_Shortest_Supersequence;
  * shortest subarray in the longer array that contains all the elements in the shorter array. the items can appear in
  * any order.
  *
- * example: input: {1,5,9}  {7,5,9,0,2,1,3,5,7,9,11,1,5,8,8,9,7}
+ * example: input: {1,5,9}  {7,5,9,0,2,1,3,(5,7,9,1),1,5,8,8,9,7}
  *
  * output: [7,10] (index of the found shortest subarray in the longer array)
  */
@@ -58,5 +58,11 @@ public class QuestionA {
     System.out.println(array.length);
     Range shortest = shortestSupersequence(array, set);
     System.out.println(shortest.getStart() + ", " + shortest.getEnd());
+
+    StringBuilder build = new StringBuilder();
+    for(int i=shortest.getStart(); i<=shortest.getEnd(); i++  ) {
+      build.append(array[i] + " ");
+    }
+    System.out.println(build.toString());
   }
 }

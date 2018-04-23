@@ -3,7 +3,7 @@ package Q17_02_Shuffle;
 import CtCILibrary.AssortedMethods;
 
 /**
- * IMPORTANT!!!
+ * IMPORTANT!!! this is well know interview question.
  *
  * Shuffle: write a method to shuffle a deck of cards. it must be a perfect shuffle -- on other words, each of the 52!
  * permutation of the deck has to be equally likely. assume that you are given a random number generator with is

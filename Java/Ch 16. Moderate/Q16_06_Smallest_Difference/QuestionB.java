@@ -28,7 +28,6 @@ public class QuestionB {
       } else {
         index2++;
       }
-
     }
     return difference;
   }

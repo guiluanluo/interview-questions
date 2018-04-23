@@ -2,6 +2,9 @@ package Q16_04_Tic_Tac_Win;
 
 import CtCILibrary.AssortedMethods;
 
+/**
+ *
+ */
 public class QuestionC {
 	public static boolean hasWinner(Piece p1, Piece p2, Piece p3) {
 		if (p1 == Piece.Empty) {

@@ -1,6 +1,8 @@
 package Q17_07_Baby_Names;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -66,7 +68,7 @@ public class QuestionA {
         int frequency = smaller.getFrequency();
         bigger.copyNamesWithFrequency(otherNames, frequency);
 
-			    /* Update mapping */
+			    /* Update mapping : similar name should have the same frequency*/
         for (String name : otherNames) {
           groups.put(name, bigger);
         }
