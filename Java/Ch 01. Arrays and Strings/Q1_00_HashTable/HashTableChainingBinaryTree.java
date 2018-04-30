@@ -1,4 +1,4 @@
-package Q1_0_HashTable;
+package Q1_00_HashTable;
 
 /**
  * Java Program to Implement Hash Tables Chaining with Binary Trees

@@ -63,9 +63,9 @@ public class QuestionA {
       second.setPrevious(first);
       first = second;
     }
-    System.out.println(head.printForward());
+    System.out.println("head list: " +head.printForward());
 
     deleteDups(head);
-    System.out.println(head.printForward());
+    System.out.println("After call deleteDups():" + head.printForward());
   }
 }

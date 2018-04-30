@@ -135,7 +135,7 @@ public class QuestionA {
 
     System.out.println("bestSplit_lucy:" + bestSplit_lucy(dictionary, sentence));
 
-//    System.out.println(bestSplit(dictionary, sentence));
+    System.out.println("bestSplit:" + bestSplit(dictionary, sentence));
   }
 
 }

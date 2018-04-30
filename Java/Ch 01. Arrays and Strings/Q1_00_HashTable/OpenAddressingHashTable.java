@@ -1,4 +1,4 @@
-package Q1_0_HashTable;
+package Q1_00_HashTable;
 
 /**
  * In an open addressing method all the elements occupy hash table array itself. There are no buckets – only a value or

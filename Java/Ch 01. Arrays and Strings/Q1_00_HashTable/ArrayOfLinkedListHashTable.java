@@ -1,4 +1,4 @@
-package Q1_0_HashTable;
+package Q1_00_HashTable;
 
 
 import java.util.Iterator;
