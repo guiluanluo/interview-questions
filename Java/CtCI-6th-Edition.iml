@@ -21,6 +21,7 @@
       <sourceFolder url="file://$MODULE_DIR$/CtCILibrary" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Introduction" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeedCode" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Geeks" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

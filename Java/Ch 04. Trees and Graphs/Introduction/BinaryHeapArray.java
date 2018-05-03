@@ -33,7 +33,7 @@ public class BinaryHeapArray {
     do {
       System.out.println("\nBinary Heap Operations\n");
       System.out.println("1. insert ");
-      System.out.println("2. delete min");
+      System.out.println("2. delete min1");
       System.out.println("3. check full");
       System.out.println("4. check empty");
       System.out.println("5. clear");
@@ -129,7 +129,7 @@ public class BinaryHeapArray {
   }
 
   /**
-   * Function to delete min element
+   * Function to delete min1 element
    **/
   public int deleteMin() {
     int keyItem = heap[0];

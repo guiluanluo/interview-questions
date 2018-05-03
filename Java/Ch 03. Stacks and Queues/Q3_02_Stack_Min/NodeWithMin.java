@@ -11,6 +11,6 @@ class NodeWithMin {
   }
 
   public String toString() {
-    return "NodeWithMin{ value:" + value + ", min:" + min + " }";
+    return "NodeWithMin{ value:" + value + ", min1:" + min + " }";
   }
 }

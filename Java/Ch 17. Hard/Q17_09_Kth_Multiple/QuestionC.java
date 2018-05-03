@@ -10,17 +10,17 @@ import java.util.Queue;
  *
  * please read page 551: let's walk through this with an example to make it really clear.
  * 1) initialize: Q3=3   Q5=5 Q7=7
- * 2) remove min=3. insert 3*3 into Q3, 5*3 into Q5, 7*3 into Q7:
+ * 2) remove min1=3. insert 3*3 into Q3, 5*3 into Q5, 7*3 into Q7:
  *      Q3=3*3   Q5=5,5*3   Q7=7,7*3
- * 3) remove min=5. 3*5 is dup, since we already did 5*3. insert 5*5 into Q5, 7*5 into Q7:
+ * 3) remove min1=5. 3*5 is dup, since we already did 5*3. insert 5*5 into Q5, 7*5 into Q7:
  *      Q3=3*3   Q5=5*3,5*5   Q7=7,7*3,7*5
- * 4) remove min=7. 3*7 and 5*7 are dup, since we already did 7*3 and 7*5. insert 7*7 into Q7:
+ * 4) remove min1=7. 3*7 and 5*7 are dup, since we already did 7*3 and 7*5. insert 7*7 into Q7:
  *      Q3=3*3   Q5=5*3,5*5   Q7=7*3,7*5,7*7
- * 5) remove min=9. insert 3*9 into Q3, 5*9 into Q5, 7*9 into Q7:
+ * 5) remove min1=9. insert 3*9 into Q3, 5*9 into Q5, 7*9 into Q7:
  *      Q3=3*9   Q5=5*3,5*5,5*9  Q7=7*3,7*5,7*7,7*9
- * 6) remove min=15. 3*15 is a dup, since we already did 5*9. insert 5*15 into Q5, 7*15 into Q7
+ * 6) remove min1=15. 3*15 is a dup, since we already did 5*9. insert 5*15 into Q5, 7*15 into Q7
  *      Q3=3*9   Q5=5*5,5*9,5*15   Q7=7*3,7*5,7*7,7*9,7*15
- * 7) remove min=21. 3*21 and 5*21 are dup, since we already did 7*9 and 7*15. insert 7*21 into Q7
+ * 7) remove min1=21. 3*21 and 5*21 are dup, since we already did 7*9 and 7*15. insert 7*21 into Q7
  *      Q3=3*9   Q5=5*5,5*9,5*15   Q7=7*5,7*7,7*9,7*15,7*21
  *
  * our pseudocode for this problem is as follows:

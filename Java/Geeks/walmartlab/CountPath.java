@@ -1,4 +1,4 @@
-package Q4_00_Matrix;
+package walmartlab;
 
 import java.util.Scanner;
 
@@ -10,22 +10,36 @@ import java.util.Scanner;
  */
 public class CountPath {
 
-  public static int findPossiblePath(int[][] matrix) {
-    int row = matrix.length;
-    int column = matrix[0].length;
-    return findPath(matrix, row, column);
+  public static int dp(int r, int c) {
+    int[][] matrix = new int[r][c];
+    for (int i = 0; i < r; i++) {
+      matrix[i][0] = 1;
+    }
+
+    for (int i = 0; i < c; i++) {
+      matrix[0][i] = 1;
+    }
+
+    for (int i = 1; i < r; i++) {
+      for (int j = 1; j < c; j++) {
+        matrix[i][j] = (matrix[i - 1][j] + matrix[i][j - 1]) % ((int) Math.pow(10, 9) + 7);
+      }
+    }
+    printMatrix(matrix);
+    return matrix[r - 1][c - 1];
   }
 
-  public static int findPath(int[][] matrix, int row, int column) {
-    if (row < 0 || column < 0) {
-      return 0;
-    }
 
-    if (row == 0 && column == 0) {
-      return 1;
+  private static void printMatrix(int[][] matrix) {
+    int r = matrix.length;
+    int c = matrix[0].length;
+    for (int i = 0; i < r; i++) {
+      String temp = "";
+      for (int j = 0; j < c; j++) {
+        temp += (matrix[i][j] + " ");
+      }
+      System.out.println(temp);
     }
-
-    return findPath(matrix, row, column - 1) + findPath(matrix, row - 1, column);
   }
 
   private static final Scanner scanner = new Scanner(System.in);
@@ -45,8 +59,7 @@ public class CountPath {
           matrix[i][j] = 0;
         }
       }
-      int result = findPossiblePath(matrix);
-      System.out.println(result);
+      System.out.println("dp:" + dp(row, column));
 
       count++;
     }

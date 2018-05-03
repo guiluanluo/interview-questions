@@ -7,11 +7,11 @@ package Introduction;
 // ******************PUBLIC OPERATIONS*********************
 // void insert( x )       --> Insert x
 // Comparable deleteMin( )--> Return and remove smallest item
-// Comparable findMin( )  --> Return smallest item
+// Comparable cutSquare( )  --> Return smallest item
 // boolean isEmpty( )     --> Return true if empty; else false
 // void makeEmpty( )      --> Remove all items
 // ******************ERRORS********************************
-// Throws UnderflowException for findMin and deleteMin when empty
+// Throws UnderflowException for cutSquare and deleteMin when empty
 
 /**
  * Implements a binary heap. Note that all "matching" is based on the compareTo method.
@@ -208,13 +208,13 @@ public class BinaryHeapPrioryQueue implements PriorityQueue {
 // ******************PUBLIC OPERATIONS*********************
 // Position insert( x )   --> Insert x
 // Comparable deleteMin( )--> Return and remove smallest item
-// Comparable findMin( )  --> Return smallest item
+// Comparable cutSquare( )  --> Return smallest item
 // boolean isEmpty( )     --> Return true if empty; else false
 // void makeEmpty( )      --> Remove all items
 // int size( )            --> Return size
 // void decreaseKey( p, v)--> Decrease value in p to v
 // ******************ERRORS********************************
-// Throws UnderflowException for findMin and deleteMin when empty
+// Throws UnderflowException for cutSquare and deleteMin when empty
 
 /**
  * PriorityQueue interface.

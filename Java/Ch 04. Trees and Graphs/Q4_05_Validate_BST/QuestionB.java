@@ -6,10 +6,10 @@ import CtCILibrary.TreeNode;
 /**
  * we leverage the definition of binary search tree: all left <= current < all right.
  *
- * we start with a range (min = NULL, max= NULL), NULL indicates that there is no min or max.  when then branch left,
- * checking that these nodes are within the range (min=NULL, max= root.value), then we branch right, checking that the
- * nodes are within the range (min = root.value, max=NULL). we proceed through the tree with this approach. when we
- * branch left, then max gets updated. when we branch right, then min gets updated. if anything fails these checks, we
+ * we start with a range (min1 = NULL, max= NULL), NULL indicates that there is no min1 or max.  when then branch left,
+ * checking that these nodes are within the range (min1=NULL, max= root.value), then we branch right, checking that the
+ * nodes are within the range (min1 = root.value, max=NULL). we proceed through the tree with this approach. when we
+ * branch left, then max gets updated. when we branch right, then min1 gets updated. if anything fails these checks, we
  * stop and return false.
  *
  * This solution takes O(N) time, where N is the number of nodes in the tree. we can prove that this si the best we can

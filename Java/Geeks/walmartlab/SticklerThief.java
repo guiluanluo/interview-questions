@@ -1,4 +1,4 @@
-package Q1_00_Array;
+package walmartlab;
 
 import java.util.Scanner;
 

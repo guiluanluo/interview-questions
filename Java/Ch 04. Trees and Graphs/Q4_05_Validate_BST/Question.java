@@ -20,7 +20,7 @@ import CtCILibrary.TreeNode;
  * the logic? validate the left tree's nodes to ensure that they are smaller than current.value
  *
  * hint 128: think about the checkBST function as a recursive function that ensures each node is within an
- * allowable(min, max) range. at first, thi range is infinite. when we traverse to the left, the min is negative
+ * allowable(min1, max) range. at first, thi range is infinite. when we traverse to the left, the min1 is negative
  * infinity and the max is root.value. can you implement this recursive function and properly adjust these ranges as you
  * traverse the tree?
  *

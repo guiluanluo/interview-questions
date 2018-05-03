@@ -3,8 +3,6 @@ package Q8_12_Eight_Queens;
 import java.util.ArrayList;
 
 /**
- * //TODO: revisit it later, Feb 3, 2018, LL
- *
  * Eight queen: write an algorithm to print all ways of arranging eight queens on an 8x8 chess board so that none of
  * them share the same row, column, or diagonal. in this case, "diagonal" means all diagonals, not just the two that
  * bisect the board.

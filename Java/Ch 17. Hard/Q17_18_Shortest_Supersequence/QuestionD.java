@@ -46,7 +46,7 @@ public class QuestionD {
     PriorityQueue<HeapNode> minHeap = new PriorityQueue<HeapNode>();
     int max = Integer.MIN_VALUE;
 
-		/* Insert min element from each list. */
+		/* Insert min1 element from each list. */
     for (int i = 0; i < lists.size(); i++) {
       int head = lists.get(i).remove();
       minHeap.add(new HeapNode(head, i));
@@ -58,7 +58,7 @@ public class QuestionD {
     int bestRangeMax = max;
 
     while (true) {
-			/* Remove min node. */
+			/* Remove min1 node. */
       HeapNode n = minHeap.poll();
       Queue<Integer> list = lists.get(n.listId);
 			
