@@ -1,8 +1,5 @@
 package walmartlab;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.PriorityQueue;
 import java.util.Scanner;
 
 /**
@@ -36,54 +33,45 @@ import java.util.Scanner;
  */
 public class LargestNumberInKSwap {
 
-  public static String swaps(String str, int k) {
-    PriorityQueue<Character> minHeap = new PriorityQueue(k, new Comparator<Character>() {
-      @Override
-      public int compare(Character o1, Character o2) {
-        return o1 >= o2 ? 1 : -1;
-      }
-    });
+  private static String max = "0";
 
-    char[] arr = str.toCharArray();
-    for (char c : arr) {
-      if (minHeap.size() == k) {
-        if (c > minHeap.peek()) {
-          minHeap.poll();
-          minHeap.add(c);
+  public static void findMaximumNumWithKSwap(char[] str, int k) {
+    if (k == 0) {
+      return;
+    }
+
+    int n = str.length;
+
+    // consider every digit
+    for (int i = 0; i < n - 1; i++) {
+      // and compare it with all digits after it
+      for (int j = i + 1; j < n; j++) {
+        // if digit at position i is less than digit at position j, swap it and check for maximum
+        // number so far and recurse for remaining swaps
+        if (Character.getNumericValue(str[i]) < Character.getNumericValue(str[j])) {
+          // swap str[i] with str[j]
+          str = swap(str, i, j);
+
+          // If current num is more than maximum so far
+          if (String.valueOf(str).compareTo(max) > 0) {
+            max = String.valueOf(str);
+          }
+
+          // recurse of the other k - 1 swaps
+          findMaximumNumWithKSwap(str, k - 1);
+
+          // back track
+          str = swap(str, i, j);
         }
-      } else {
-        minHeap.add(c);
       }
     }
-
-    StringBuilder build = new StringBuilder();
-    while (!minHeap.isEmpty()) {
-      build.append(minHeap.poll());
-    }
-
-    return build.toString();
   }
 
-  public static String swaps_2(String str, int k) {
-    char[] arr = str.toCharArray();
-    Arrays.sort(arr);
-
-    int size = arr.length;
-
-    StringBuilder build = new StringBuilder();
-    for (int i = 0; i < k; i++) {
-      build.append(arr[size - 1 - i]);
-    }
-
-    String kstr = build.toString();
-    int count = 0;
-    for (int j = 0; j < str.length() && count < size - k; j++) {
-      if (!kstr.contains(str.charAt(j) + "")) {
-        build.append(str.charAt(j));
-        count++;
-      }
-    }
-    return build.toString();
+  private static char[] swap(char[] arr, int i, int j) {
+    char temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+    return arr;
   }
 
   private static final Scanner scanner = new Scanner(System.in);
@@ -95,8 +83,9 @@ public class LargestNumberInKSwap {
     while (count < testCount) {
       int k = Integer.parseInt(scanner.nextLine().trim());
       String str = scanner.nextLine().trim();
-//      System.out.println("result:" + swaps(str, k));
-      System.out.println("result2:" + swaps_2(str, k));
+
+      findMaximumNumWithKSwap(str.toCharArray(), k);
+      System.out.println(max);
       count++;
     }
   }

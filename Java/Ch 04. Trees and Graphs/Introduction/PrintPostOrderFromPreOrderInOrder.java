@@ -47,29 +47,29 @@ public class PrintPostOrderFromPreOrderInOrder {
   }
 
   public void printPostOrder(int in[], int pre[], int inStart, int inEnd, int preStart, int preEnd) {
-    // The first element in pre[] is always root, search it in in[] to find left and right subtrees
-    int root = search(in, inStart, inEnd, pre[preStart]);
+    // The first element in pre[] is always rootIdx, search it in in[] to find left and right subtrees
+    int rootIdx = search(in, inStart, inEnd, pre[preStart]);
 
     // If left subtree is not empty, print left subtree
-    if (root != 0 && root > inStart - 1) {
-//      printPostOrder(in, pre + 1, root);
-      printPostOrder(in, pre, inStart, root, preStart + 1, root);
+    if (rootIdx != 0 && rootIdx > inStart - 1) {
+//      printPostOrder(in, pre + 1, rootIdx);
+      printPostOrder(in, pre, inStart, rootIdx, preStart + 1, rootIdx);
     }
 
     // If right subtree is not empty, print right subtree ????
-    if (root != (inEnd - inStart) && root < inEnd-2) {
-//    if (root != n-1) {
-//      printPostOrder(in + root + 1, pre + root + 1, n - root - 1);
-      printPostOrder(in, pre, root + 1, inEnd, root + 1, preEnd);
+    if (rootIdx != (inEnd - inStart) && rootIdx < inEnd - 2) {
+//    if (rootIdx != n-1) {
+//      printPostOrder(in + rootIdx + 1, pre + rootIdx + 1, n - rootIdx - 1);
+      printPostOrder(in, pre, rootIdx + 1, inEnd, rootIdx + 1, preEnd);
     }
 
-    // Print root
+    // Print rootIdx
     System.out.println(pre[preStart] + " ");
   }
 
   private // A utility function to search x in arr[] of size n
   int search(int arr[], int inStart, int inEnd, int x) {
-    for (int i = inStart; i <=inEnd; i++) {
+    for (int i = inStart; i <= inEnd; i++) {
       if (arr[i] == x) {
         return i;
       }
