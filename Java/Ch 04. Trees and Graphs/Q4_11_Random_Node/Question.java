@@ -6,8 +6,8 @@ package Q4_11_Random_Node;
  * chosen. design and implement an algorithm for getRandomNode, and explain how you would implement the rest of the
  * methods.
  *
- * hint 42: be very careful in this problem to ensure that each node is equally likely and that your soluton doesn't
- * dlow doen the speed of standard binary search tree algorithms (link insert, find, delete). also, remember that even
+ * hint 42: be very careful in this problem to ensure that each node is equally likely and that your solution doesn't
+ * allow done the speed of standard binary search tree algorithms (link insert, find, delete). also, remember that even
  * if you assume that it's a balanced binary search tree, this doesn't mean that the tree is full/complete/perfect.
  *
  * hint 62: as a naive "brute force" algorithm, can you use a tree traversal algorithm to implement this algorithm? what
@@ -25,7 +25,7 @@ package Q4_11_Random_Node;
  * there a wya you can adjust it to make it work?
  *
  * hint 112: the reason that the earlier solution(picking a random number between 1 and 3) doesn't work is that the
- * probabilities for the nodes won't be equal. for example, the root will be return with probability 1/3, even fi there
+ * probabilities for the nodes won't be equal. for example, the root will be return with probability 1/3, even if there
  * are 50+ nodes int he tree. clearly, not all the nodes have probabilities 1/3, so these nodes won't have equal
  * probabilities. we can resolve this one issue by picking a random number between 1 and size_of_tree instead. this only
  * resolves the issue for the root, though. what about the reset of the nodes?

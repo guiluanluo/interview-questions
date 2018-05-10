@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import CtCILibrary.TreeNode;
 
 /*
- * TODO: will review it later, Jan 20, 2018 , LL
  * BST sequence: a binary search tree was created by traversing through an array from left to right and inserting each
  * element. given a binary search tree with distinct elements, print all possible arrays that could have led to this
  * tree.
@@ -21,25 +20,24 @@ import CtCILibrary.TreeNode;
  * hint 39: what is the very first value that must be in each array?
  *
  * hint 48: the root is the very first value that must be in every array. what can you say about the order of the values
- * in the left subtree as compared toe the vlaues in the rights subtree? do the left subtree value need to be inserted
+ * in the left subtree as compared to the values in the rights subtree? do the left subtree value need to be inserted
  * before the right subtree?
  *
  * hint 66: the relationship between the left subtree values and the right subtree value is, essentially, anything. the
  * left subtree values could be inserted before the right subtree, or the reverse (right values before left),
  * or any other ordering.
  *
- * hint 82: break this down into subproblems. user recursive. if you had all possible sequences for the left subtree
+ * hint 82: break this down into sub-problems. use recursive. if you had all possible sequences for the left subtree
  * and the right subtree, how could you create all possible sequences for the entire tree?
  *
- * Soluton: it's very usdful to kick off this question with a good example.
+ * Solution: it's very useful to kick off this question with a good example.
  *
  */
 public class Question {
 
   public static void weaveLists(LinkedList<Integer> first, LinkedList<Integer> second,
       ArrayList<LinkedList<Integer>> results, LinkedList<Integer> prefix) {
-    /* One list is empty. Add the remainder to [a cloned] prefix and
-     * store result. */
+    /* One list is empty. Add the remainder to [a cloned] prefix and store result. */
     if (first.size() == 0 || second.size() == 0) {
       LinkedList<Integer> result = (LinkedList<Integer>) prefix.clone();
       result.addAll(first);
@@ -57,8 +55,7 @@ public class Question {
     prefix.removeLast();
     first.addFirst(headFirst);
 
-		/* Do the same thing with second, damaging and then restoring
-     * the list.*/
+		/* Do the same thing with second, damaging and then restoring the list.*/
     int headSecond = second.removeFirst();
     prefix.addLast(headSecond);
     weaveLists(first, second, results, prefix);
