@@ -1,0 +1,9 @@
+mc/microservices/graphql/model/Bank.class
+mc/microservices/graphql/resolver/Query.class
+mc/microservices/graphql/resolver/AccountResolver.class
+mc/microservices/graphql/model/Account.class
+mc/microservices/graphql/repository/AccountRepository.class
+mc/microservices/graphql/SpringDataJPAGraphQLH2Application.class
+mc/microservices/graphql/DataInitializer.class
+mc/microservices/graphql/resolver/Mutation.class
+mc/microservices/graphql/repository/BankRepository.class

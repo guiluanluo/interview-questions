@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="net.bytebuddy.asm.Advice.Argument"/>
+    <fullyQualifiedTypeName name="mc.microservices.graphql.resolver.Query"/>
+</qualifiedTypeNameHistroy>

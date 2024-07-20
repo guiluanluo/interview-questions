@@ -1,0 +1,9 @@
+/Users/g0l018m/MichaelWorkspace/react-graphql-springboot-jpa-h2-example/spring-data-jpa-graphql-h2/src/main/java/mc/microservices/graphql/repository/AccountRepository.java
+/Users/g0l018m/MichaelWorkspace/react-graphql-springboot-jpa-h2-example/spring-data-jpa-graphql-h2/src/main/java/mc/microservices/graphql/repository/BankRepository.java
+/Users/g0l018m/MichaelWorkspace/react-graphql-springboot-jpa-h2-example/spring-data-jpa-graphql-h2/src/main/java/mc/microservices/graphql/model/Account.java
+/Users/g0l018m/MichaelWorkspace/react-graphql-springboot-jpa-h2-example/spring-data-jpa-graphql-h2/src/main/java/mc/microservices/graphql/resolver/Mutation.java
+/Users/g0l018m/MichaelWorkspace/react-graphql-springboot-jpa-h2-example/spring-data-jpa-graphql-h2/src/main/java/mc/microservices/graphql/SpringDataJPAGraphQLH2Application.java
+/Users/g0l018m/MichaelWorkspace/react-graphql-springboot-jpa-h2-example/spring-data-jpa-graphql-h2/src/main/java/mc/microservices/graphql/DataInitializer.java
+/Users/g0l018m/MichaelWorkspace/react-graphql-springboot-jpa-h2-example/spring-data-jpa-graphql-h2/src/main/java/mc/microservices/graphql/resolver/AccountResolver.java
+/Users/g0l018m/MichaelWorkspace/react-graphql-springboot-jpa-h2-example/spring-data-jpa-graphql-h2/src/main/java/mc/microservices/graphql/resolver/Query.java
+/Users/g0l018m/MichaelWorkspace/react-graphql-springboot-jpa-h2-example/spring-data-jpa-graphql-h2/src/main/java/mc/microservices/graphql/model/Bank.java
